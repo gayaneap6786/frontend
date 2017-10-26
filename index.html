@@ -1,8 +1,3169 @@
-<html>
 
+ 
+  
+
+ 
+
+
+
+
+
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"> 
+<html>
+<head>
+ <title>
+  Java Practices -> Home
+ </title>
+ <link rel="stylesheet" type="text/css" href="../stylesheet9.css" media="all">
+ 
+ <link rel="shortcut icon" href='/images/favicon.ico;jsessionid=1CD274DABA78D05F24BB7B77D895BBEE' type="image/vnd.microsoft.icon">
+ <meta name="description" content="Concise presentations of java programming practices, tasks, and conventions, amply illustrated with syntax highlighted code examples.">
+ 
+ 
+ <meta name="keywords" content="java,java programming,java practices,java idiom,java style,java design patterns,java coding conventions">
+ 
+</head>
+ 
 <body>
 
-<div>Template</div>
+
+<div class='menu-bar'>
+ 
+  <a href='/home/HomeAction.do;jsessionid=1CD274DABA78D05F24BB7B77D895BBEE' title='Table of Contents'>Home</a> |
+  <a href='/vote/VoteSummaryAction.do;jsessionid=1CD274DABA78D05F24BB7B77D895BBEE' title='View Poll Results'>Poll</a> |
+   
+  
+  <b><a href='/source/SourceAction.do;jsessionid=1CD274DABA78D05F24BB7B77D895BBEE' title='Grab Source Code'>Source Code</a></b><IMG class='no-margin' SRC="../images/goldstar.gif" ALT=""> |
+
+  <a href='https://ca.linkedin.com/in/johnohanley' title='Hire me'> <b>Hire Me</b></a> | 
+  <a href='http://www.web4j.com/Java_Web_Application_Framework_Overview.jsp?From=1' title='Free Download - Java Web Application Framework'><b>WEB4J</b></a> |
+  
+  <a href='http://www.formula4j.com/' title='Math expression parser'><b>Formula4J</b></a> |
+
+  <a href='http://www.amazon.com/exec/obidos/ASIN/0321356683/ref=nosim/javapractices-20'><b>Effective Java</b></a> |
+
+   <a href='/references/ReferencesAction.do;jsessionid=1CD274DABA78D05F24BB7B77D895BBEE' title='References'>Links</a>
+   
+  <form action='/search/SearchAction.do;jsessionid=1CD274DABA78D05F24BB7B77D895BBEE' method='get' class='search-form'>
+   <input type='text' name='SearchTerms' value="" size=12 maxlength=50 class='search'>
+   <input type='submit' value="Search">
+  </form>
+ 
+</div>
+
+<P>
+
+
+
+
+  
+
+ 
+
+
+
+
+
+
+<p class="display-messages">
+
+ 
+
+ 
+
+</p>
+
+
+<div class="main-layout">
+ 
+   
+
+ 
+
+
+
+<div class='page-title'>Collected Java Practices</div>
+
+
+
+
+
+<div class='home-page-section'>
+<b>javapractices.com</b> offers concise presentations of Java practices, tasks, and designs,
+ illustrated with syntax-highlighted code examples. 
+The code examples are available for <a href='../source/SourceAction.do'>download</a>.
+ See below for <a href="#comments">user comments</a> on the site.
+
+ <p class='quotation' >
+   <table align="CENTER" CELLSPACING="0" CELLPADDING="3">
+   <tr>
+    <td align="left">
+      <b>Science is the organized scepticism in the reliability of expert opinion.</b>
+    </td>
+   </tr>
+   <tr>
+     <td align="right">
+      <em>- The Physics Teacher (Sep 1969)</em>, Richard Feynman
+      </td>
+   </tr>
+   <tr>
+
+    
+    
+    
+
+
+
+
+
+   </tr>
+  </table>
+</p>
+
+<div class='chapters'>
+   <a href="#Servlets and JSPs"> Servlets and JSPs</a> |
+   <a href="#Swing"> Swing</a> |
+   <a href="#Exceptions"> Exceptions</a> |
+   <a href="#Input-Output"> Input-Output</a> |
+   <a href="#Databases"> Databases</a> |
+   <a href="#Collections"> Collections</a> |
+   <a href="#Overriding Object Methods"> Overriding Object Methods</a> |
+   <a href="#Common Tasks"> Common Tasks</a> |
+   <a href="#Common Design Patterns"> Common Design Patterns</a> |
+   <a href="#Common Practices"> Common Practices</a> |
+   <a href="#Inheritance"> Inheritance</a> |
+   <a href="#More Common Practices"> More Common Practices</a> |
+   <a href="#Assertions"> Assertions</a> |
+   <a href="#Constructors"> Constructors</a> |
+   <a href="#Serialization"> Serialization</a> |
+   <a href="#Threads"> Threads</a>
+</div>
+
+</div>
+
+
+
+ 
+   <a name='Servlets and JSPs'></a>
+   <div class='page-section'>Servlets and JSPs</div>
+    <table width="100%" align="CENTER"  border=0 CELLSPACING="0" CELLPADDING="3">
+     <colgroup>
+      <col width="50%">
+      <col width="50%">
+    </colgroup>
+   
+     
+      <tr>
+       <td>
+        
+        <a href='../topic/TopicAction.do;jsessionid=1CD274DABA78D05F24BB7B77D895BBEE?Id=188'>A Web App Framework - WEB4J</a>
+        
+        
+       </td>
+      
+     
+   
+     
+     
+      <td>
+       
+       <a href='../topic/TopicAction.do;jsessionid=1CD274DABA78D05F24BB7B77D895BBEE?Id=109'>Always maintain HttpSessions </a>
+        
+        
+      </td>
+     </tr>
+    
+   
+     
+      <tr>
+       <td>
+        
+        <a href='../topic/TopicAction.do;jsessionid=1CD274DABA78D05F24BB7B77D895BBEE?Id=203'>Beware multilingual submit buttons</a>
+        
+        
+       </td>
+      
+     
+   
+     
+     
+      <td>
+       
+       <a href='../topic/TopicAction.do;jsessionid=1CD274DABA78D05F24BB7B77D895BBEE?Id=217'>Beware of common hacks</a>
+        
+        
+      </td>
+     </tr>
+    
+   
+     
+      <tr>
+       <td>
+        
+        <a href='../topic/TopicAction.do;jsessionid=1CD274DABA78D05F24BB7B77D895BBEE?Id=116'>Beware of custom cookies</a>
+        
+        
+       </td>
+      
+     
+   
+     
+     
+      <td>
+       
+       <a href='../topic/TopicAction.do;jsessionid=1CD274DABA78D05F24BB7B77D895BBEE?Id=201'>Beware of doubly escaped ampersands</a>
+        
+        
+      </td>
+     </tr>
+    
+   
+     
+      <tr>
+       <td>
+        
+        <a href='../topic/TopicAction.do;jsessionid=1CD274DABA78D05F24BB7B77D895BBEE?Id=226'>Beware of URL rewriting</a>
+        
+        
+       </td>
+      
+     
+   
+     
+     
+      <td>
+       
+       <a href='../topic/TopicAction.do;jsessionid=1CD274DABA78D05F24BB7B77D895BBEE?Id=198'>Choose form validation style carefully</a>
+        
+        
+      </td>
+     </tr>
+    
+   
+     
+      <tr>
+       <td>
+        
+        <a href='../topic/TopicAction.do;jsessionid=1CD274DABA78D05F24BB7B77D895BBEE?Id=219'>Consider Controllers for redirects</a>
+        
+        
+       </td>
+      
+     
+   
+     
+     
+      <td>
+       
+       <a href='../topic/TopicAction.do;jsessionid=1CD274DABA78D05F24BB7B77D895BBEE?Id=111'>Do not synchronize doGet, doPost</a>
+        
+        
+      </td>
+     </tr>
+    
+   
+     
+      <tr>
+       <td>
+        
+        <a href='../topic/TopicAction.do;jsessionid=1CD274DABA78D05F24BB7B77D895BBEE?Id=95'>Emit flexible URLs</a>
+        
+        
+       </td>
+      
+     
+   
+     
+     
+      <td>
+       
+       <a href='../topic/TopicAction.do;jsessionid=1CD274DABA78D05F24BB7B77D895BBEE?Id=96'>Escape special characters</a>
+        
+        
+      </td>
+     </tr>
+    
+   
+     
+      <tr>
+       <td>
+        
+        <a href='../topic/TopicAction.do;jsessionid=1CD274DABA78D05F24BB7B77D895BBEE?Id=181'>Forward versus redirect</a>
+        
+        
+       </td>
+      
+     
+   
+     
+     
+      <td>
+       
+       <a href='../topic/TopicAction.do;jsessionid=1CD274DABA78D05F24BB7B77D895BBEE?Id=112'>JSPs should contain only presentation logic</a>
+        
+        
+      </td>
+     </tr>
+    
+   
+     
+      <tr>
+       <td>
+        
+        <a href='../topic/TopicAction.do;jsessionid=1CD274DABA78D05F24BB7B77D895BBEE?Id=141'>Loss of data during restart</a>
+        
+        
+       </td>
+      
+     
+   
+     
+     
+      <td>
+       
+       <a href='../topic/TopicAction.do;jsessionid=1CD274DABA78D05F24BB7B77D895BBEE?Id=191'>Manage sessions closely</a>
+        
+        
+      </td>
+     </tr>
+    
+   
+     
+      <tr>
+       <td>
+        
+        <a href='../topic/TopicAction.do;jsessionid=1CD274DABA78D05F24BB7B77D895BBEE?Id=98'>Measure web app performance</a>
+        
+        
+       </td>
+      
+     
+   
+     
+     
+      <td>
+       
+       <a href='../topic/TopicAction.do;jsessionid=1CD274DABA78D05F24BB7B77D895BBEE?Id=93'>Minimize site response time</a>
+        
+        
+      </td>
+     </tr>
+    
+   
+     
+      <tr>
+       <td>
+        
+        <a href='../topic/TopicAction.do;jsessionid=1CD274DABA78D05F24BB7B77D895BBEE?Id=138'>Parse parameters into domain objects</a>
+        
+        
+       </td>
+      
+     
+   
+     
+     
+      <td>
+       
+       <a href='../topic/TopicAction.do;jsessionid=1CD274DABA78D05F24BB7B77D895BBEE?Id=177'>Pre-populate forms</a>
+        
+        
+      </td>
+     </tr>
+    
+   
+     
+      <tr>
+       <td>
+        
+        <a href='../topic/TopicAction.do;jsessionid=1CD274DABA78D05F24BB7B77D895BBEE?Id=175'>Prefer JSTL tags</a>
+        
+        
+       </td>
+      
+     
+   
+     
+     
+      <td>
+       
+       <a href='../topic/TopicAction.do;jsessionid=1CD274DABA78D05F24BB7B77D895BBEE?Id=206'>Prefer UTF-8 in all layers</a>
+        
+        
+      </td>
+     </tr>
+    
+   
+     
+      <tr>
+       <td>
+        
+        <a href='../topic/TopicAction.do;jsessionid=1CD274DABA78D05F24BB7B77D895BBEE?Id=178'>Prevent self-linking</a>
+        
+        
+       </td>
+      
+     
+   
+     
+     
+      <td>
+       
+       <a href='../topic/TopicAction.do;jsessionid=1CD274DABA78D05F24BB7B77D895BBEE?Id=107'>Refactor large Controllers </a>
+        
+        
+      </td>
+     </tr>
+    
+   
+     
+      <tr>
+       <td>
+        
+        <a href='../topic/TopicAction.do;jsessionid=1CD274DABA78D05F24BB7B77D895BBEE?Id=137'>Repel invalid requests</a>
+        
+        
+       </td>
+      
+     
+   
+     
+     
+      <td>
+       
+       <a href='../topic/TopicAction.do;jsessionid=1CD274DABA78D05F24BB7B77D895BBEE?Id=220'>Reuse login page for errors</a>
+        
+        
+      </td>
+     </tr>
+    
+   
+     
+      <tr>
+       <td>
+        
+        <a href='../topic/TopicAction.do;jsessionid=1CD274DABA78D05F24BB7B77D895BBEE?Id=179'>Send trouble-ticket emails</a>
+        
+        
+       </td>
+      
+     
+   
+     
+     
+      <td>
+       
+       <a href='../topic/TopicAction.do;jsessionid=1CD274DABA78D05F24BB7B77D895BBEE?Id=232'>Serve binary content</a>
+        
+        
+      </td>
+     </tr>
+    
+   
+     
+      <tr>
+       <td>
+        
+        <a href='../topic/TopicAction.do;jsessionid=1CD274DABA78D05F24BB7B77D895BBEE?Id=110'>Session-scope objects often Serializable</a>
+        
+        
+       </td>
+      
+     
+   
+     
+     
+      <td>
+       
+       <a href='../topic/TopicAction.do;jsessionid=1CD274DABA78D05F24BB7B77D895BBEE?Id=193'>Struts seems mediocre</a>
+        
+        
+      </td>
+     </tr>
+    
+   
+     
+      <tr>
+       <td>
+        
+        <a href='../topic/TopicAction.do;jsessionid=1CD274DABA78D05F24BB7B77D895BBEE?Id=140'>Thread-safety in web apps</a>
+        
+        
+       </td>
+      
+     
+   
+     
+     
+      <td>
+       
+       <a href='../topic/TopicAction.do;jsessionid=1CD274DABA78D05F24BB7B77D895BBEE?Id=218'>Understand details of FORM tags</a>
+        
+        
+      </td>
+     </tr>
+    
+   
+     
+      <tr>
+       <td>
+        
+        <a href='../topic/TopicAction.do;jsessionid=1CD274DABA78D05F24BB7B77D895BBEE?Id=202'>Use Cascading Style Sheets</a>
+        
+        
+       </td>
+      
+     
+   
+     
+     
+      <td>
+       
+       <a href='../topic/TopicAction.do;jsessionid=1CD274DABA78D05F24BB7B77D895BBEE?Id=222'>Use extensions for fine-grained security</a>
+        
+        
+      </td>
+     </tr>
+    
+   
+     
+      <tr>
+       <td>
+        
+        <a href='../topic/TopicAction.do;jsessionid=1CD274DABA78D05F24BB7B77D895BBEE?Id=108'>Use Model-View-Controller framework</a>
+        
+        
+       </td>
+      
+     
+   
+     
+     
+      <td>
+       
+       <a href='../topic/TopicAction.do;jsessionid=1CD274DABA78D05F24BB7B77D895BBEE?Id=176'>Use templates to standardize layout</a>
+        
+        
+      </td>
+     </tr>
+    
+   
+     
+      <tr>
+       <td>
+        
+        <a href='../topic/TopicAction.do;jsessionid=1CD274DABA78D05F24BB7B77D895BBEE?Id=180'>Validate email addresses</a>
+        
+        
+       </td>
+      
+     
+   
+     
+     
+      <td>
+       
+       <a href='../topic/TopicAction.do;jsessionid=1CD274DABA78D05F24BB7B77D895BBEE?Id=97'>Validate generated HTML</a>
+        
+        
+      </td>
+     </tr>
+    
+   
+     
+      <tr>
+       <td>
+        
+        <a href='../topic/TopicAction.do;jsessionid=1CD274DABA78D05F24BB7B77D895BBEE?Id=94'>Web usability guidelines</a>
+        
+        
+       </td>
+      
+     
+   
+     
+     
+      <td>
+       
+       <a href='../topic/TopicAction.do;jsessionid=1CD274DABA78D05F24BB7B77D895BBEE?Id=221'>Wrap file upload requests</a>
+        
+        
+      </td>
+     </tr>
+    
+   
+   </table>
+ 
+   <a name='Swing'></a>
+   <div class='page-section'>Swing</div>
+    <table width="100%" align="CENTER"  border=0 CELLSPACING="0" CELLPADDING="3">
+     <colgroup>
+      <col width="50%">
+      <col width="50%">
+    </colgroup>
+   
+     
+      <tr>
+       <td>
+        
+        <a href='../topic/TopicAction.do;jsessionid=1CD274DABA78D05F24BB7B77D895BBEE?Id=170'>A Swing App - StocksMonitor</a>
+        
+        
+       </td>
+      
+     
+   
+     
+     
+      <td>
+       
+       <a href='../topic/TopicAction.do;jsessionid=1CD274DABA78D05F24BB7B77D895BBEE?Id=159'>Actions</a>
+        
+        
+      </td>
+     </tr>
+    
+   
+     
+      <tr>
+       <td>
+        
+        <a href='../topic/TopicAction.do;jsessionid=1CD274DABA78D05F24BB7B77D895BBEE?Id=169'>Align menu items</a>
+        
+        
+       </td>
+      
+     
+   
+     
+     
+      <td>
+       
+       <a href='../topic/TopicAction.do;jsessionid=1CD274DABA78D05F24BB7B77D895BBEE?Id=158'>Change theme</a>
+        
+        
+      </td>
+     </tr>
+    
+   
+     
+      <tr>
+       <td>
+        
+        <a href='../topic/TopicAction.do;jsessionid=1CD274DABA78D05F24BB7B77D895BBEE?Id=236'>Consider JGoodies Forms for layouts</a>
+        
+        
+       </td>
+      
+     
+   
+     
+     
+      <td>
+       
+       <a href='../topic/TopicAction.do;jsessionid=1CD274DABA78D05F24BB7B77D895BBEE?Id=230'>Don't bury dialogs</a>
+        
+        
+      </td>
+     </tr>
+    
+   
+     
+      <tr>
+       <td>
+        
+        <a href='../topic/TopicAction.do;jsessionid=1CD274DABA78D05F24BB7B77D895BBEE?Id=228'>Don't subclass JDialog or JFrame</a>
+        
+        
+       </td>
+      
+     
+   
+     
+     
+      <td>
+       
+       <a href='../topic/TopicAction.do;jsessionid=1CD274DABA78D05F24BB7B77D895BBEE?Id=163'>Filter table rows</a>
+        
+        
+      </td>
+     </tr>
+    
+   
+     
+      <tr>
+       <td>
+        
+        <a href='../topic/TopicAction.do;jsessionid=1CD274DABA78D05F24BB7B77D895BBEE?Id=167'>Input dialogs</a>
+        
+        
+       </td>
+      
+     
+   
+     
+     
+      <td>
+       
+       <a href='../topic/TopicAction.do;jsessionid=1CD274DABA78D05F24BB7B77D895BBEE?Id=242'>Launch other applications</a>
+        
+        
+      </td>
+     </tr>
+    
+   
+     
+      <tr>
+       <td>
+        
+        <a href='../topic/TopicAction.do;jsessionid=1CD274DABA78D05F24BB7B77D895BBEE?Id=166'>Layout Managers</a>
+        
+        
+       </td>
+      
+     
+   
+     
+     
+      <td>
+       
+       <a href='../topic/TopicAction.do;jsessionid=1CD274DABA78D05F24BB7B77D895BBEE?Id=148'>Look and Feel guidelines</a>
+        
+        
+      </td>
+     </tr>
+    
+   
+     
+      <tr>
+       <td>
+        
+        <a href='../topic/TopicAction.do;jsessionid=1CD274DABA78D05F24BB7B77D895BBEE?Id=231'>Minimal Swing application</a>
+        
+        
+       </td>
+      
+     
+   
+     
+     
+      <td>
+       
+       <a href='../topic/TopicAction.do;jsessionid=1CD274DABA78D05F24BB7B77D895BBEE?Id=156'>Observers and listeners</a>
+        
+        
+      </td>
+     </tr>
+    
+   
+     
+      <tr>
+       <td>
+        
+        <a href='../topic/TopicAction.do;jsessionid=1CD274DABA78D05F24BB7B77D895BBEE?Id=154'>Preferences dialogs</a>
+        
+        
+       </td>
+      
+     
+   
+     
+     
+      <td>
+       
+       <a href='../topic/TopicAction.do;jsessionid=1CD274DABA78D05F24BB7B77D895BBEE?Id=229'>Provide an uncaught exception handler</a>
+        
+        
+      </td>
+     </tr>
+    
+   
+     
+      <tr>
+       <td>
+        
+        <a href='../topic/TopicAction.do;jsessionid=1CD274DABA78D05F24BB7B77D895BBEE?Id=168'>Render table cells</a>
+        
+        
+       </td>
+      
+     
+   
+     
+     
+      <td>
+       
+       <a href='../topic/TopicAction.do;jsessionid=1CD274DABA78D05F24BB7B77D895BBEE?Id=162'>Sort table rows</a>
+        
+        
+      </td>
+     </tr>
+    
+   
+     
+      <tr>
+       <td>
+        
+        <a href='../topic/TopicAction.do;jsessionid=1CD274DABA78D05F24BB7B77D895BBEE?Id=149'>Splash screen</a>
+        
+        
+       </td>
+      
+     
+   
+     
+     
+      <td>
+       
+       <a href='../topic/TopicAction.do;jsessionid=1CD274DABA78D05F24BB7B77D895BBEE?Id=150'>Standardized dialogs</a>
+        
+        
+      </td>
+     </tr>
+    
+   
+     
+      <tr>
+       <td>
+        
+        <a href='../topic/TopicAction.do;jsessionid=1CD274DABA78D05F24BB7B77D895BBEE?Id=165'>Swing in general</a>
+        
+        
+       </td>
+      
+     
+   
+     
+     
+      <td>
+       
+       <a href='../topic/TopicAction.do;jsessionid=1CD274DABA78D05F24BB7B77D895BBEE?Id=153'>Swing threads</a>
+        
+        
+      </td>
+     </tr>
+    
+   
+     
+      <tr>
+       <td>
+        
+        <a href='../topic/TopicAction.do;jsessionid=1CD274DABA78D05F24BB7B77D895BBEE?Id=152'>Swing utility tasks</a>
+        
+        
+       </td>
+      
+     
+   
+     
+     
+      <td>
+       
+       <a href='../topic/TopicAction.do;jsessionid=1CD274DABA78D05F24BB7B77D895BBEE?Id=160'>Timers</a>
+        
+        
+      </td>
+     </tr>
+    
+   
+     
+      <tr>
+       <td>
+        
+        <a href='../topic/TopicAction.do;jsessionid=1CD274DABA78D05F24BB7B77D895BBEE?Id=157'>Using JavaHelp</a>
+        
+        
+       </td>
+      
+     
+   
+     
+     
+      <td>
+       
+       <a href='../topic/TopicAction.do;jsessionid=1CD274DABA78D05F24BB7B77D895BBEE?Id=155'>Using preferences</a>
+        
+        
+      </td>
+     </tr>
+    
+   
+     
+      <tr>
+       <td>
+        
+        <a href='../topic/TopicAction.do;jsessionid=1CD274DABA78D05F24BB7B77D895BBEE?Id=233'>Verify input with Model Objects</a>
+        
+        
+       </td>
+      
+     
+   
+     
+     
+      <td>
+       
+       <a href='../topic/TopicAction.do;jsessionid=1CD274DABA78D05F24BB7B77D895BBEE?Id=151'>Verify input with regular expressions</a>
+        
+        
+      </td>
+     </tr>
+    
+   
+   </table>
+ 
+   <a name='Exceptions'></a>
+   <div class='page-section'>Exceptions</div>
+    <table width="100%" align="CENTER"  border=0 CELLSPACING="0" CELLPADDING="3">
+     <colgroup>
+      <col width="50%">
+      <col width="50%">
+    </colgroup>
+   
+     
+      <tr>
+       <td>
+        
+        <a href='../topic/TopicAction.do;jsessionid=1CD274DABA78D05F24BB7B77D895BBEE?Id=171'>Avoid @throws in javadoc</a>
+        
+        
+       </td>
+      
+     
+   
+     
+     
+      <td>
+       
+       <a href='../topic/TopicAction.do;jsessionid=1CD274DABA78D05F24BB7B77D895BBEE?Id=16'>Avoid empty catch blocks</a>
+        
+        
+      </td>
+     </tr>
+    
+   
+     
+      <tr>
+       <td>
+        
+        <a href='../topic/TopicAction.do;jsessionid=1CD274DABA78D05F24BB7B77D895BBEE?Id=27'>Be specific in throws clause</a>
+        
+        
+       </td>
+      
+     
+   
+     
+     
+      <td>
+       
+       <a href='../topic/TopicAction.do;jsessionid=1CD274DABA78D05F24BB7B77D895BBEE?Id=235'>Beware of unknown root causes</a>
+        
+        
+      </td>
+     </tr>
+    
+   
+     
+      <tr>
+       <td>
+        
+        <a href='../topic/TopicAction.do;jsessionid=1CD274DABA78D05F24BB7B77D895BBEE?Id=129'>Checked versus unchecked exceptions</a>
+        
+        
+       </td>
+      
+     
+   
+     
+     
+      <td>
+       
+       <a href='../topic/TopicAction.do;jsessionid=1CD274DABA78D05F24BB7B77D895BBEE?Id=120'>Exception translation</a>
+        
+        
+      </td>
+     </tr>
+    
+   
+     
+      <tr>
+       <td>
+        
+        <a href='../topic/TopicAction.do;jsessionid=1CD274DABA78D05F24BB7B77D895BBEE?Id=19'>Exceptions and control flow</a>
+        
+        
+       </td>
+      
+     
+   
+     
+     
+      <td>
+       
+       <a href='../topic/TopicAction.do;jsessionid=1CD274DABA78D05F24BB7B77D895BBEE?Id=25'>Finally and catch</a>
+        
+        
+      </td>
+     </tr>
+    
+   
+     
+      <tr>
+       <td>
+        
+        <a href='../topic/TopicAction.do;jsessionid=1CD274DABA78D05F24BB7B77D895BBEE?Id=44'>Javadoc all exceptions</a>
+        
+        
+       </td>
+      
+     
+   
+     
+     
+      <td>
+       
+       <a href='../topic/TopicAction.do;jsessionid=1CD274DABA78D05F24BB7B77D895BBEE?Id=130'>Pass all pertinent data to exceptions</a>
+        
+        
+      </td>
+     </tr>
+    
+   
+     
+      <tr>
+       <td>
+        
+        <a href='../topic/TopicAction.do;jsessionid=1CD274DABA78D05F24BB7B77D895BBEE?Id=78'>Stack trace as String</a>
+        
+        
+       </td>
+      
+     
+   
+     
+     
+      <td>
+       
+       <a href='../topic/TopicAction.do;jsessionid=1CD274DABA78D05F24BB7B77D895BBEE?Id=190'>Use template for repeated try-catch</a>
+        
+        
+      </td>
+     </tr>
+    
+   
+   </table>
+ 
+   <a name='Input&#045;Output'></a>
+   <div class='page-section'>Input&#045;Output</div>
+    <table width="100%" align="CENTER"  border=0 CELLSPACING="0" CELLPADDING="3">
+     <colgroup>
+      <col width="50%">
+      <col width="50%">
+    </colgroup>
+   
+     
+      <tr>
+       <td>
+        
+        <a href='../topic/TopicAction.do;jsessionid=1CD274DABA78D05F24BB7B77D895BBEE?Id=8'>Always close streams</a>
+        
+        
+       </td>
+      
+     
+   
+     
+     
+      <td>
+       
+       <a href='../topic/TopicAction.do;jsessionid=1CD274DABA78D05F24BB7B77D895BBEE?Id=122'>Buffering usually appropriate</a>
+        
+        
+      </td>
+     </tr>
+    
+   
+     
+      <tr>
+       <td>
+        
+        <a href='../topic/TopicAction.do;jsessionid=1CD274DABA78D05F24BB7B77D895BBEE?Id=79'>Console input</a>
+        
+        
+       </td>
+      
+     
+   
+     
+     
+      <td>
+       
+       <a href='../topic/TopicAction.do;jsessionid=1CD274DABA78D05F24BB7B77D895BBEE?Id=246'>Copy a file</a>
+        
+        
+      </td>
+     </tr>
+    
+   
+     
+      <tr>
+       <td>
+        
+        <a href='../topic/TopicAction.do;jsessionid=1CD274DABA78D05F24BB7B77D895BBEE?Id=245'>Reading and writing binary files</a>
+        
+        
+       </td>
+      
+     
+   
+     
+     
+      <td>
+       
+       <a href='../topic/TopicAction.do;jsessionid=1CD274DABA78D05F24BB7B77D895BBEE?Id=57'>Reading and writing Serializable objects</a>
+        
+        
+      </td>
+     </tr>
+    
+   
+     
+      <tr>
+       <td>
+        
+        <a href='../topic/TopicAction.do;jsessionid=1CD274DABA78D05F24BB7B77D895BBEE?Id=42'>Reading and writing text files</a>
+        
+        
+       </td>
+      
+     
+   
+   </table>
+ 
+   <a name='Databases'></a>
+   <div class='page-section'>Databases</div>
+    <table width="100%" align="CENTER"  border=0 CELLSPACING="0" CELLPADDING="3">
+     <colgroup>
+      <col width="50%">
+      <col width="50%">
+    </colgroup>
+   
+     
+      <tr>
+       <td>
+        
+        <a href='../topic/TopicAction.do;jsessionid=1CD274DABA78D05F24BB7B77D895BBEE?Id=192'>Business identifiers as String</a>
+        
+        
+       </td>
+      
+     
+   
+     
+     
+      <td>
+       
+       <a href='../topic/TopicAction.do;jsessionid=1CD274DABA78D05F24BB7B77D895BBEE?Id=75'>Connection pools</a>
+        
+        
+      </td>
+     </tr>
+    
+   
+     
+      <tr>
+       <td>
+        
+        <a href='../topic/TopicAction.do;jsessionid=1CD274DABA78D05F24BB7B77D895BBEE?Id=124'>Consider data layer tools</a>
+        
+        
+       </td>
+      
+     
+   
+     
+     
+      <td>
+       
+       <a href='../topic/TopicAction.do;jsessionid=1CD274DABA78D05F24BB7B77D895BBEE?Id=172'>Consider using standard SQL</a>
+        
+        
+      </td>
+     </tr>
+    
+   
+     
+      <tr>
+       <td>
+        
+        <a href='../topic/TopicAction.do;jsessionid=1CD274DABA78D05F24BB7B77D895BBEE?Id=199'>Consider wrapper classes for optional data</a>
+        
+        
+       </td>
+      
+     
+   
+     
+     
+      <td>
+       
+       <a href='../topic/TopicAction.do;jsessionid=1CD274DABA78D05F24BB7B77D895BBEE?Id=66'>Data access objects</a>
+        
+        
+      </td>
+     </tr>
+    
+   
+     
+      <tr>
+       <td>
+        
+        <a href='../topic/TopicAction.do;jsessionid=1CD274DABA78D05F24BB7B77D895BBEE?Id=77'>Data exception wrapping</a>
+        
+        
+       </td>
+      
+     
+   
+     
+     
+      <td>
+       
+       <a href='../topic/TopicAction.do;jsessionid=1CD274DABA78D05F24BB7B77D895BBEE?Id=211'>Data is king</a>
+        
+        
+      </td>
+     </tr>
+    
+   
+     
+      <tr>
+       <td>
+        
+        <a href='../topic/TopicAction.do;jsessionid=1CD274DABA78D05F24BB7B77D895BBEE?Id=106'>Don't perform basic SQL tasks in code </a>
+        
+        
+       </td>
+      
+     
+   
+     
+     
+      <td>
+       
+       <a href='../topic/TopicAction.do;jsessionid=1CD274DABA78D05F24BB7B77D895BBEE?Id=183'>Encapsulate connections</a>
+        
+        
+      </td>
+     </tr>
+    
+   
+     
+      <tr>
+       <td>
+        
+        <a href='../topic/TopicAction.do;jsessionid=1CD274DABA78D05F24BB7B77D895BBEE?Id=105'>Keep SQL out of code</a>
+        
+        
+       </td>
+      
+     
+   
+     
+     
+      <td>
+       
+       <a href='../topic/TopicAction.do;jsessionid=1CD274DABA78D05F24BB7B77D895BBEE?Id=212'>Prefer PreparedStatement</a>
+        
+        
+      </td>
+     </tr>
+    
+   
+     
+      <tr>
+       <td>
+        
+        <a href='../topic/TopicAction.do;jsessionid=1CD274DABA78D05F24BB7B77D895BBEE?Id=76'>Reduce database code duplication</a>
+        
+        
+       </td>
+      
+     
+   
+     
+     
+      <td>
+       
+       <a href='../topic/TopicAction.do;jsessionid=1CD274DABA78D05F24BB7B77D895BBEE?Id=61'>Remember the basics of database design</a>
+        
+        
+      </td>
+     </tr>
+    
+   
+     
+      <tr>
+       <td>
+        
+        <a href='../topic/TopicAction.do;jsessionid=1CD274DABA78D05F24BB7B77D895BBEE?Id=184'>Simplify database operations</a>
+        
+        
+       </td>
+      
+     
+   
+     
+     
+      <td>
+       
+       <a href='../topic/TopicAction.do;jsessionid=1CD274DABA78D05F24BB7B77D895BBEE?Id=200'>Try pseudo-persistence for mock ups</a>
+        
+        
+      </td>
+     </tr>
+    
+   
+     
+      <tr>
+       <td>
+        
+        <a href='../topic/TopicAction.do;jsessionid=1CD274DABA78D05F24BB7B77D895BBEE?Id=189'>Use template for transactions</a>
+        
+        
+       </td>
+      
+     
+   
+   </table>
+ 
+   <a name='Collections'></a>
+   <div class='page-section'>Collections</div>
+    <table width="100%" align="CENTER"  border=0 CELLSPACING="0" CELLPADDING="3">
+     <colgroup>
+      <col width="50%">
+      <col width="50%">
+    </colgroup>
+   
+     
+      <tr>
+       <td>
+        
+        <a href='../topic/TopicAction.do;jsessionid=1CD274DABA78D05F24BB7B77D895BBEE?Id=65'>Choosing the right Collection</a>
+        
+        
+       </td>
+      
+     
+   
+     
+     
+      <td>
+       
+       <a href='../topic/TopicAction.do;jsessionid=1CD274DABA78D05F24BB7B77D895BBEE?Id=173'>Encapsulate collections</a>
+        
+        
+      </td>
+     </tr>
+    
+   
+     
+      <tr>
+       <td>
+        
+        <a href='../topic/TopicAction.do;jsessionid=1CD274DABA78D05F24BB7B77D895BBEE?Id=88'>Iterate without an index</a>
+        
+        
+       </td>
+      
+     
+   
+     
+     
+      <td>
+       
+       <a href='../topic/TopicAction.do;jsessionid=1CD274DABA78D05F24BB7B77D895BBEE?Id=39'>Prefer Collections over older classes</a>
+        
+        
+      </td>
+     </tr>
+    
+   
+     
+      <tr>
+       <td>
+        
+        <a href='../topic/TopicAction.do;jsessionid=1CD274DABA78D05F24BB7B77D895BBEE?Id=125'>Two ways of using Iterator</a>
+        
+        
+       </td>
+      
+     
+   
+     
+     
+      <td>
+       
+       <a href='../topic/TopicAction.do;jsessionid=1CD274DABA78D05F24BB7B77D895BBEE?Id=196'>Use for-each liberally</a>
+        
+        
+      </td>
+     </tr>
+    
+   
+     
+      <tr>
+       <td>
+        
+        <a href='../topic/TopicAction.do;jsessionid=1CD274DABA78D05F24BB7B77D895BBEE?Id=26'>Use interface references to Collections</a>
+        
+        
+       </td>
+      
+     
+   
+     
+     
+      <td>
+       
+       <a href='../topic/TopicAction.do;jsessionid=1CD274DABA78D05F24BB7B77D895BBEE?Id=9'>Use standard Collections</a>
+        
+        
+      </td>
+     </tr>
+    
+   
+   </table>
+ 
+   <a name='Overriding Object Methods'></a>
+   <div class='page-section'>Overriding Object Methods</div>
+    <table width="100%" align="CENTER"  border=0 CELLSPACING="0" CELLPADDING="3">
+     <colgroup>
+      <col width="50%">
+      <col width="50%">
+    </colgroup>
+   
+     
+      <tr>
+       <td>
+        
+        <a href='../topic/TopicAction.do;jsessionid=1CD274DABA78D05F24BB7B77D895BBEE?Id=71'>Avoid clone</a>
+        
+        
+       </td>
+      
+     
+   
+     
+     
+      <td>
+       
+       <a href='../topic/TopicAction.do;jsessionid=1CD274DABA78D05F24BB7B77D895BBEE?Id=10'>Implementing compareTo</a>
+        
+        
+      </td>
+     </tr>
+    
+   
+     
+      <tr>
+       <td>
+        
+        <a href='../topic/TopicAction.do;jsessionid=1CD274DABA78D05F24BB7B77D895BBEE?Id=17'>Implementing equals</a>
+        
+        
+       </td>
+      
+     
+   
+     
+     
+      <td>
+       
+       <a href='../topic/TopicAction.do;jsessionid=1CD274DABA78D05F24BB7B77D895BBEE?Id=28'>Implementing hashCode</a>
+        
+        
+      </td>
+     </tr>
+    
+   
+     
+      <tr>
+       <td>
+        
+        <a href='../topic/TopicAction.do;jsessionid=1CD274DABA78D05F24BB7B77D895BBEE?Id=55'>Implementing toString</a>
+        
+        
+       </td>
+      
+     
+   
+     
+     
+      <td>
+       
+       <a href='../topic/TopicAction.do;jsessionid=1CD274DABA78D05F24BB7B77D895BBEE?Id=24'>Never rely on finalize</a>
+        
+        
+      </td>
+     </tr>
+    
+   
+   </table>
+ 
+   <a name='Common Tasks'></a>
+   <div class='page-section'>Common Tasks</div>
+    <table width="100%" align="CENTER"  border=0 CELLSPACING="0" CELLPADDING="3">
+     <colgroup>
+      <col width="50%">
+      <col width="50%">
+    </colgroup>
+   
+     
+      <tr>
+       <td>
+        
+        <a href='../topic/TopicAction.do;jsessionid=1CD274DABA78D05F24BB7B77D895BBEE?Id=131'>Arrays as String </a>
+        
+        
+       </td>
+      
+     
+   
+     
+     
+      <td>
+       
+       <a href='../topic/TopicAction.do;jsessionid=1CD274DABA78D05F24BB7B77D895BBEE?Id=82'>Clipboard copy and paste</a>
+        
+        
+      </td>
+     </tr>
+    
+   
+     
+      <tr>
+       <td>
+        
+        <a href='../topic/TopicAction.do;jsessionid=1CD274DABA78D05F24BB7B77D895BBEE?Id=243'>Command line operations</a>
+        
+        
+       </td>
+      
+     
+   
+     
+     
+      <td>
+       
+       <a href='../topic/TopicAction.do;jsessionid=1CD274DABA78D05F24BB7B77D895BBEE?Id=207'>Compare and sort Strings</a>
+        
+        
+      </td>
+     </tr>
+    
+   
+     
+      <tr>
+       <td>
+        
+        <a href='../topic/TopicAction.do;jsessionid=1CD274DABA78D05F24BB7B77D895BBEE?Id=3'>Copy an array </a>
+        
+        
+       </td>
+      
+     
+   
+     
+     
+      <td>
+       
+       <a href='../topic/TopicAction.do;jsessionid=1CD274DABA78D05F24BB7B77D895BBEE?Id=18'>Determine if Strings are equal</a>
+        
+        
+      </td>
+     </tr>
+    
+   
+     
+      <tr>
+       <td>
+        
+        <a href='../topic/TopicAction.do;jsessionid=1CD274DABA78D05F24BB7B77D895BBEE?Id=146'>Examine bytecode</a>
+        
+        
+       </td>
+      
+     
+   
+     
+     
+      <td>
+       
+       <a href='../topic/TopicAction.do;jsessionid=1CD274DABA78D05F24BB7B77D895BBEE?Id=147'>Fetch web page and header</a>
+        
+        
+      </td>
+     </tr>
+    
+   
+     
+      <tr>
+       <td>
+        
+        <a href='../topic/TopicAction.do;jsessionid=1CD274DABA78D05F24BB7B77D895BBEE?Id=62'>Generate random numbers</a>
+        
+        
+       </td>
+      
+     
+   
+     
+     
+      <td>
+       
+       <a href='../topic/TopicAction.do;jsessionid=1CD274DABA78D05F24BB7B77D895BBEE?Id=127'>Get database connection</a>
+        
+        
+      </td>
+     </tr>
+    
+   
+     
+      <tr>
+       <td>
+        
+        <a href='../topic/TopicAction.do;jsessionid=1CD274DABA78D05F24BB7B77D895BBEE?Id=83'>Get size of object in memory</a>
+        
+        
+       </td>
+      
+     
+   
+     
+     
+      <td>
+       
+       <a href='../topic/TopicAction.do;jsessionid=1CD274DABA78D05F24BB7B77D895BBEE?Id=239'>Implement code tables</a>
+        
+        
+      </td>
+     </tr>
+    
+   
+     
+      <tr>
+       <td>
+        
+        <a href='../topic/TopicAction.do;jsessionid=1CD274DABA78D05F24BB7B77D895BBEE?Id=73'>Internationalization</a>
+        
+        
+       </td>
+      
+     
+   
+     
+     
+      <td>
+       
+       <a href='../topic/TopicAction.do;jsessionid=1CD274DABA78D05F24BB7B77D895BBEE?Id=143'>Logging messages</a>
+        
+        
+      </td>
+     </tr>
+    
+   
+     
+      <tr>
+       <td>
+        
+        <a href='../topic/TopicAction.do;jsessionid=1CD274DABA78D05F24BB7B77D895BBEE?Id=36'>Measure application performance</a>
+        
+        
+       </td>
+      
+     
+   
+     
+     
+      <td>
+       
+       <a href='../topic/TopicAction.do;jsessionid=1CD274DABA78D05F24BB7B77D895BBEE?Id=225'>Modernize old code</a>
+        
+        
+      </td>
+     </tr>
+    
+   
+     
+      <tr>
+       <td>
+        
+        <a href='../topic/TopicAction.do;jsessionid=1CD274DABA78D05F24BB7B77D895BBEE?Id=260'>Open file in native directory</a>
+        
+        
+       </td>
+      
+     
+   
+     
+     
+      <td>
+       
+       <a href='../topic/TopicAction.do;jsessionid=1CD274DABA78D05F24BB7B77D895BBEE?Id=87'>Parse text</a>
+        
+        
+      </td>
+     </tr>
+    
+   
+     
+      <tr>
+       <td>
+        
+        <a href='../topic/TopicAction.do;jsessionid=1CD274DABA78D05F24BB7B77D895BBEE?Id=103'>Pattern-match lines of a file</a>
+        
+        
+       </td>
+      
+     
+   
+     
+     
+      <td>
+       
+       <a href='../topic/TopicAction.do;jsessionid=1CD274DABA78D05F24BB7B77D895BBEE?Id=238'>Read jar version information</a>
+        
+        
+      </td>
+     </tr>
+    
+   
+     
+      <tr>
+       <td>
+        
+        <a href='../topic/TopicAction.do;jsessionid=1CD274DABA78D05F24BB7B77D895BBEE?Id=43'>Recovering resources</a>
+        
+        
+       </td>
+      
+     
+   
+     
+     
+      <td>
+       
+       <a href='../topic/TopicAction.do;jsessionid=1CD274DABA78D05F24BB7B77D895BBEE?Id=68'>Recursive file listing</a>
+        
+        
+      </td>
+     </tr>
+    
+   
+     
+      <tr>
+       <td>
+        
+        <a href='../topic/TopicAction.do;jsessionid=1CD274DABA78D05F24BB7B77D895BBEE?Id=80'>Replace a substring</a>
+        
+        
+       </td>
+      
+     
+   
+     
+     
+      <td>
+       
+       <a href='../topic/TopicAction.do;jsessionid=1CD274DABA78D05F24BB7B77D895BBEE?Id=13'>Representing money</a>
+        
+        
+      </td>
+     </tr>
+    
+   
+     
+      <tr>
+       <td>
+        
+        <a href='../topic/TopicAction.do;jsessionid=1CD274DABA78D05F24BB7B77D895BBEE?Id=144'>Send an email</a>
+        
+        
+       </td>
+      
+     
+   
+     
+     
+      <td>
+       
+       <a href='../topic/TopicAction.do;jsessionid=1CD274DABA78D05F24BB7B77D895BBEE?Id=85'>Time execution speed</a>
+        
+        
+      </td>
+     </tr>
+    
+   
+   </table>
+ 
+   <a name='Common Design Patterns'></a>
+   <div class='page-section'>Common Design Patterns</div>
+    <table width="100%" align="CENTER"  border=0 CELLSPACING="0" CELLPADDING="3">
+     <colgroup>
+      <col width="50%">
+      <col width="50%">
+    </colgroup>
+   
+     
+      <tr>
+       <td>
+        
+        <a href='../topic/TopicAction.do;jsessionid=1CD274DABA78D05F24BB7B77D895BBEE?Id=128'>Abstract Factory</a>
+        
+        
+       </td>
+      
+     
+   
+     
+     
+      <td>
+       
+       <a href='../topic/TopicAction.do;jsessionid=1CD274DABA78D05F24BB7B77D895BBEE?Id=139'>Command objects</a>
+        
+        
+      </td>
+     </tr>
+    
+   
+     
+      <tr>
+       <td>
+        
+        <a href='../topic/TopicAction.do;jsessionid=1CD274DABA78D05F24BB7B77D895BBEE?Id=21'>Factory methods</a>
+        
+        
+       </td>
+      
+     
+   
+     
+     
+      <td>
+       
+       <a href='../topic/TopicAction.do;jsessionid=1CD274DABA78D05F24BB7B77D895BBEE?Id=29'>Immutable objects</a>
+        
+        
+      </td>
+     </tr>
+    
+   
+     
+      <tr>
+       <td>
+        
+        <a href='../topic/TopicAction.do;jsessionid=1CD274DABA78D05F24BB7B77D895BBEE?Id=34'>Lazy initialization</a>
+        
+        
+       </td>
+      
+     
+   
+     
+     
+      <td>
+       
+       <a href='../topic/TopicAction.do;jsessionid=1CD274DABA78D05F24BB7B77D895BBEE?Id=187'>Model Objects</a>
+        
+        
+      </td>
+     </tr>
+    
+   
+     
+      <tr>
+       <td>
+        
+        <a href='../topic/TopicAction.do;jsessionid=1CD274DABA78D05F24BB7B77D895BBEE?Id=237'>Plugin Factory</a>
+        
+        
+       </td>
+      
+     
+   
+     
+     
+      <td>
+       
+       <a href='../topic/TopicAction.do;jsessionid=1CD274DABA78D05F24BB7B77D895BBEE?Id=40'>Private constructor</a>
+        
+        
+      </td>
+     </tr>
+    
+   
+     
+      <tr>
+       <td>
+        
+        <a href='../topic/TopicAction.do;jsessionid=1CD274DABA78D05F24BB7B77D895BBEE?Id=46'>Singleton</a>
+        
+        
+       </td>
+      
+     
+   
+     
+     
+      <td>
+       
+       <a href='../topic/TopicAction.do;jsessionid=1CD274DABA78D05F24BB7B77D895BBEE?Id=164'>Template method</a>
+        
+        
+      </td>
+     </tr>
+    
+   
+     
+      <tr>
+       <td>
+        
+        <a href='../topic/TopicAction.do;jsessionid=1CD274DABA78D05F24BB7B77D895BBEE?Id=1'>Type-Safe Enumerations</a>
+        
+        
+       </td>
+      
+     
+   
+     
+     
+      <td>
+       
+       <a href='../topic/TopicAction.do;jsessionid=1CD274DABA78D05F24BB7B77D895BBEE?Id=258'>Wrapper (Decorator)</a>
+        
+        
+      </td>
+     </tr>
+    
+   
+   </table>
+ 
+   <a name='Common Practices'></a>
+   <div class='page-section'>Common Practices</div>
+    <table width="100%" align="CENTER"  border=0 CELLSPACING="0" CELLPADDING="3">
+     <colgroup>
+      <col width="50%">
+      <col width="50%">
+    </colgroup>
+   
+     
+      <tr>
+       <td>
+        
+        <a href='../topic/TopicAction.do;jsessionid=1CD274DABA78D05F24BB7B77D895BBEE?Id=227'>Avoid basic style errors</a>
+        
+        
+       </td>
+      
+     
+   
+     
+     
+      <td>
+       
+       <a href='../topic/TopicAction.do;jsessionid=1CD274DABA78D05F24BB7B77D895BBEE?Id=224'>Avoid raw types</a>
+        
+        
+      </td>
+     </tr>
+    
+   
+     
+      <tr>
+       <td>
+        
+        <a href='../topic/TopicAction.do;jsessionid=1CD274DABA78D05F24BB7B77D895BBEE?Id=31'>Beware of instanceof operator</a>
+        
+        
+       </td>
+      
+     
+   
+     
+     
+      <td>
+       
+       <a href='../topic/TopicAction.do;jsessionid=1CD274DABA78D05F24BB7B77D895BBEE?Id=2'>Class for constants</a>
+        
+        
+      </td>
+     </tr>
+    
+   
+     
+      <tr>
+       <td>
+        
+        <a href='../topic/TopicAction.do;jsessionid=1CD274DABA78D05F24BB7B77D895BBEE?Id=74'>Construct classes from the outside in</a>
+        
+        
+       </td>
+      
+     
+   
+     
+     
+      <td>
+       
+       <a href='../topic/TopicAction.do;jsessionid=1CD274DABA78D05F24BB7B77D895BBEE?Id=38'>Do not break portability</a>
+        
+        
+      </td>
+     </tr>
+    
+   
+     
+      <tr>
+       <td>
+        
+        <a href='../topic/TopicAction.do;jsessionid=1CD274DABA78D05F24BB7B77D895BBEE?Id=126'>Don't declare local variables before use</a>
+        
+        
+       </td>
+      
+     
+   
+     
+     
+      <td>
+       
+       <a href='../topic/TopicAction.do;jsessionid=1CD274DABA78D05F24BB7B77D895BBEE?Id=22'>Fields should usually be private</a>
+        
+        
+      </td>
+     </tr>
+    
+   
+     
+      <tr>
+       <td>
+        
+        <a href='../topic/TopicAction.do;jsessionid=1CD274DABA78D05F24BB7B77D895BBEE?Id=32'>Interface for constants</a>
+        
+        
+       </td>
+      
+     
+   
+     
+     
+      <td>
+       
+       <a href='../topic/TopicAction.do;jsessionid=1CD274DABA78D05F24BB7B77D895BBEE?Id=41'>Know the core libraries</a>
+        
+        
+      </td>
+     </tr>
+    
+   
+     
+      <tr>
+       <td>
+        
+        <a href='../topic/TopicAction.do;jsessionid=1CD274DABA78D05F24BB7B77D895BBEE?Id=123'>Minimize ripple effects</a>
+        
+        
+       </td>
+      
+     
+   
+     
+     
+      <td>
+       
+       <a href='../topic/TopicAction.do;jsessionid=1CD274DABA78D05F24BB7B77D895BBEE?Id=58'>Naming conventions</a>
+        
+        
+      </td>
+     </tr>
+    
+   
+     
+      <tr>
+       <td>
+        
+        <a href='../topic/TopicAction.do;jsessionid=1CD274DABA78D05F24BB7B77D895BBEE?Id=261'>Nest classes with care</a>
+        
+        
+       </td>
+      
+     
+   
+     
+     
+      <td>
+       
+       <a href='../topic/TopicAction.do;jsessionid=1CD274DABA78D05F24BB7B77D895BBEE?Id=37'>Output parameters</a>
+        
+        
+      </td>
+     </tr>
+    
+   
+     
+      <tr>
+       <td>
+        
+        <a href='../topic/TopicAction.do;jsessionid=1CD274DABA78D05F24BB7B77D895BBEE?Id=136'>Separate public and private members</a>
+        
+        
+       </td>
+      
+     
+   
+     
+     
+      <td>
+       
+       <a href='../topic/TopicAction.do;jsessionid=1CD274DABA78D05F24BB7B77D895BBEE?Id=4'>String concatenation does not scale</a>
+        
+        
+      </td>
+     </tr>
+    
+   
+     
+      <tr>
+       <td>
+        
+        <a href='../topic/TopicAction.do;jsessionid=1CD274DABA78D05F24BB7B77D895BBEE?Id=240'>Tag or marker interfaces</a>
+        
+        
+       </td>
+      
+     
+   
+     
+     
+      <td>
+       
+       <a href='../topic/TopicAction.do;jsessionid=1CD274DABA78D05F24BB7B77D895BBEE?Id=30'>Uncommon classes need explicit imports</a>
+        
+        
+      </td>
+     </tr>
+    
+   
+     
+      <tr>
+       <td>
+        
+        <a href='../topic/TopicAction.do;jsessionid=1CD274DABA78D05F24BB7B77D895BBEE?Id=223'>Use @Override liberally</a>
+        
+        
+       </td>
+      
+     
+   
+     
+     
+      <td>
+       
+       <a href='../topic/TopicAction.do;jsessionid=1CD274DABA78D05F24BB7B77D895BBEE?Id=23'>Use final liberally</a>
+        
+        
+      </td>
+     </tr>
+    
+   
+     
+      <tr>
+       <td>
+        
+        <a href='../topic/TopicAction.do;jsessionid=1CD274DABA78D05F24BB7B77D895BBEE?Id=60'>Use javadoc liberally</a>
+        
+        
+       </td>
+      
+     
+   
+     
+     
+      <td>
+       
+       <a href='../topic/TopicAction.do;jsessionid=1CD274DABA78D05F24BB7B77D895BBEE?Id=195'>Use static imports rarely</a>
+        
+        
+      </td>
+     </tr>
+    
+   
+     
+      <tr>
+       <td>
+        
+        <a href='../topic/TopicAction.do;jsessionid=1CD274DABA78D05F24BB7B77D895BBEE?Id=86'>Use System.exit with care</a>
+        
+        
+       </td>
+      
+     
+   
+     
+     
+      <td>
+       
+       <a href='../topic/TopicAction.do;jsessionid=1CD274DABA78D05F24BB7B77D895BBEE?Id=241'>Use Version Control tools</a>
+        
+        
+      </td>
+     </tr>
+    
+   
+     
+      <tr>
+       <td>
+        
+        <a href='../topic/TopicAction.do;jsessionid=1CD274DABA78D05F24BB7B77D895BBEE?Id=5'>Validate method arguments</a>
+        
+        
+       </td>
+      
+     
+   
+     
+     
+      <td>
+       
+       <a href='../topic/TopicAction.do;jsessionid=1CD274DABA78D05F24BB7B77D895BBEE?Id=259'>Wisdom, not rules</a>
+        
+        
+      </td>
+     </tr>
+    
+   
+   </table>
+ 
+   <a name='Inheritance'></a>
+   <div class='page-section'>Inheritance</div>
+    <table width="100%" align="CENTER"  border=0 CELLSPACING="0" CELLPADDING="3">
+     <colgroup>
+      <col width="50%">
+      <col width="50%">
+    </colgroup>
+   
+     
+      <tr>
+       <td>
+        
+        <a href='../topic/TopicAction.do;jsessionid=1CD274DABA78D05F24BB7B77D895BBEE?Id=72'>Consider composition instead of subclassing</a>
+        
+        
+       </td>
+      
+     
+   
+     
+     
+      <td>
+       
+       <a href='../topic/TopicAction.do;jsessionid=1CD274DABA78D05F24BB7B77D895BBEE?Id=69'>Designing for subclassing</a>
+        
+        
+      </td>
+     </tr>
+    
+   
+     
+      <tr>
+       <td>
+        
+        <a href='../topic/TopicAction.do;jsessionid=1CD274DABA78D05F24BB7B77D895BBEE?Id=89'>Overridable methods need special care</a>
+        
+        
+       </td>
+      
+     
+   
+     
+     
+      <td>
+       
+       <a href='../topic/TopicAction.do;jsessionid=1CD274DABA78D05F24BB7B77D895BBEE?Id=90'>Remember styles of inheritance</a>
+        
+        
+      </td>
+     </tr>
+    
+   
+   </table>
+ 
+   <a name='More Common Practices'></a>
+   <div class='page-section'>More Common Practices</div>
+    <table width="100%" align="CENTER"  border=0 CELLSPACING="0" CELLPADDING="3">
+     <colgroup>
+      <col width="50%">
+      <col width="50%">
+    </colgroup>
+   
+     
+      <tr>
+       <td>
+        
+        <a href='../topic/TopicAction.do;jsessionid=1CD274DABA78D05F24BB7B77D895BBEE?Id=134'>Avoid null if possible</a>
+        
+        
+       </td>
+      
+     
+   
+     
+     
+      <td>
+       
+       <a href='../topic/TopicAction.do;jsessionid=1CD274DABA78D05F24BB7B77D895BBEE?Id=257'>Beware of Byte Order Marks</a>
+        
+        
+      </td>
+     </tr>
+    
+   
+     
+      <tr>
+       <td>
+        
+        <a href='../topic/TopicAction.do;jsessionid=1CD274DABA78D05F24BB7B77D895BBEE?Id=210'>Beware of DecimalFormat</a>
+        
+        
+       </td>
+      
+     
+   
+     
+     
+      <td>
+       
+       <a href='../topic/TopicAction.do;jsessionid=1CD274DABA78D05F24BB7B77D895BBEE?Id=213'>Beware of floating point numbers</a>
+        
+        
+      </td>
+     </tr>
+    
+   
+     
+      <tr>
+       <td>
+        
+        <a href='../topic/TopicAction.do;jsessionid=1CD274DABA78D05F24BB7B77D895BBEE?Id=91'>Clarifying method</a>
+        
+        
+       </td>
+      
+     
+   
+     
+     
+      <td>
+       
+       <a href='../topic/TopicAction.do;jsessionid=1CD274DABA78D05F24BB7B77D895BBEE?Id=115'>Coding conventions</a>
+        
+        
+      </td>
+     </tr>
+    
+   
+     
+      <tr>
+       <td>
+        
+        <a href='../topic/TopicAction.do;jsessionid=1CD274DABA78D05F24BB7B77D895BBEE?Id=104'>Compile regular expressions once</a>
+        
+        
+       </td>
+      
+     
+   
+     
+     
+      <td>
+       
+       <a href='../topic/TopicAction.do;jsessionid=1CD274DABA78D05F24BB7B77D895BBEE?Id=64'>Conditional compile</a>
+        
+        
+      </td>
+     </tr>
+    
+   
+     
+      <tr>
+       <td>
+        
+        <a href='../topic/TopicAction.do;jsessionid=1CD274DABA78D05F24BB7B77D895BBEE?Id=132'>Consider code generators</a>
+        
+        
+       </td>
+      
+     
+   
+     
+     
+      <td>
+       
+       <a href='../topic/TopicAction.do;jsessionid=1CD274DABA78D05F24BB7B77D895BBEE?Id=81'>Consider immutable forms for dates</a>
+        
+        
+      </td>
+     </tr>
+    
+   
+     
+      <tr>
+       <td>
+        
+        <a href='../topic/TopicAction.do;jsessionid=1CD274DABA78D05F24BB7B77D895BBEE?Id=63'>Conventional name for return value</a>
+        
+        
+       </td>
+      
+     
+   
+     
+     
+      <td>
+       
+       <a href='../topic/TopicAction.do;jsessionid=1CD274DABA78D05F24BB7B77D895BBEE?Id=15'>Defensive copying</a>
+        
+        
+      </td>
+     </tr>
+    
+   
+     
+      <tr>
+       <td>
+        
+        <a href='../topic/TopicAction.do;jsessionid=1CD274DABA78D05F24BB7B77D895BBEE?Id=194'>Design by Contract</a>
+        
+        
+       </td>
+      
+     
+   
+     
+     
+      <td>
+       
+       <a href='../topic/TopicAction.do;jsessionid=1CD274DABA78D05F24BB7B77D895BBEE?Id=244'>Don't use tab characters</a>
+        
+        
+      </td>
+     </tr>
+    
+   
+     
+      <tr>
+       <td>
+        
+        <a href='../topic/TopicAction.do;jsessionid=1CD274DABA78D05F24BB7B77D895BBEE?Id=20'>Extra space in argument list</a>
+        
+        
+       </td>
+      
+     
+   
+     
+     
+      <td>
+       
+       <a href='../topic/TopicAction.do;jsessionid=1CD274DABA78D05F24BB7B77D895BBEE?Id=56'>Generating unique IDs</a>
+        
+        
+      </td>
+     </tr>
+    
+   
+     
+      <tr>
+       <td>
+        
+        <a href='../topic/TopicAction.do;jsessionid=1CD274DABA78D05F24BB7B77D895BBEE?Id=214'>Include 'from', exclude 'to'</a>
+        
+        
+       </td>
+      
+     
+   
+     
+     
+      <td>
+       
+       <a href='../topic/TopicAction.do;jsessionid=1CD274DABA78D05F24BB7B77D895BBEE?Id=114'>Multiple return statements</a>
+        
+        
+      </td>
+     </tr>
+    
+   
+     
+      <tr>
+       <td>
+        
+        <a href='../topic/TopicAction.do;jsessionid=1CD274DABA78D05F24BB7B77D895BBEE?Id=119'>Overloading can be tricky</a>
+        
+        
+       </td>
+      
+     
+   
+     
+     
+      <td>
+       
+       <a href='../topic/TopicAction.do;jsessionid=1CD274DABA78D05F24BB7B77D895BBEE?Id=205'>Package by feature, not layer</a>
+        
+        
+      </td>
+     </tr>
+    
+   
+     
+      <tr>
+       <td>
+        
+        <a href='../topic/TopicAction.do;jsessionid=1CD274DABA78D05F24BB7B77D895BBEE?Id=216'>Passwords never in clear text</a>
+        
+        
+       </td>
+      
+     
+   
+     
+     
+      <td>
+       
+       <a href='../topic/TopicAction.do;jsessionid=1CD274DABA78D05F24BB7B77D895BBEE?Id=59'>Prefer empty items to null ones</a>
+        
+        
+      </td>
+     </tr>
+    
+   
+     
+      <tr>
+       <td>
+        
+        <a href='../topic/TopicAction.do;jsessionid=1CD274DABA78D05F24BB7B77D895BBEE?Id=204'>Quote dynamic text when logging</a>
+        
+        
+       </td>
+      
+     
+   
+     
+     
+      <td>
+       
+       <a href='../topic/TopicAction.do;jsessionid=1CD274DABA78D05F24BB7B77D895BBEE?Id=92'>Self-encapsulate fields</a>
+        
+        
+      </td>
+     </tr>
+    
+   
+     
+      <tr>
+       <td>
+        
+        <a href='../topic/TopicAction.do;jsessionid=1CD274DABA78D05F24BB7B77D895BBEE?Id=256'>Structs are occasionally useful</a>
+        
+        
+       </td>
+      
+     
+   
+     
+     
+      <td>
+       
+       <a href='../topic/TopicAction.do;jsessionid=1CD274DABA78D05F24BB7B77D895BBEE?Id=174'>Test using main method</a>
+        
+        
+      </td>
+     </tr>
+    
+   
+     
+      <tr>
+       <td>
+        
+        <a href='../topic/TopicAction.do;jsessionid=1CD274DABA78D05F24BB7B77D895BBEE?Id=208'>Try alternatives to ResourceBundle</a>
+        
+        
+       </td>
+      
+     
+   
+     
+     
+      <td>
+       
+       <a href='../topic/TopicAction.do;jsessionid=1CD274DABA78D05F24BB7B77D895BBEE?Id=234'>Use a fake system clock</a>
+        
+        
+      </td>
+     </tr>
+    
+   
+     
+      <tr>
+       <td>
+        
+        <a href='../topic/TopicAction.do;jsessionid=1CD274DABA78D05F24BB7B77D895BBEE?Id=33'>Use a testing framework (JUnit)</a>
+        
+        
+       </td>
+      
+     
+   
+     
+     
+      <td>
+       
+       <a href='../topic/TopicAction.do;jsessionid=1CD274DABA78D05F24BB7B77D895BBEE?Id=135'>Use Ant for build scripts</a>
+        
+        
+      </td>
+     </tr>
+    
+   
+     
+      <tr>
+       <td>
+        
+        <a href='../topic/TopicAction.do;jsessionid=1CD274DABA78D05F24BB7B77D895BBEE?Id=197'>Use boxing with care</a>
+        
+        
+       </td>
+      
+     
+   
+     
+     
+      <td>
+       
+       <a href='../topic/TopicAction.do;jsessionid=1CD274DABA78D05F24BB7B77D895BBEE?Id=186'>Use enums to restrict arguments</a>
+        
+        
+      </td>
+     </tr>
+    
+   
+     
+      <tr>
+       <td>
+        
+        <a href='../topic/TopicAction.do;jsessionid=1CD274DABA78D05F24BB7B77D895BBEE?Id=6'>Validate state with class invariants</a>
+        
+        
+       </td>
+      
+     
+   
+     
+     
+      <td>
+       
+       <a href='../topic/TopicAction.do;jsessionid=1CD274DABA78D05F24BB7B77D895BBEE?Id=209'>Validation belongs in a Model Object</a>
+        
+        
+      </td>
+     </tr>
+    
+   
+   </table>
+ 
+   <a name='Assertions'></a>
+   <div class='page-section'>Assertions</div>
+    <table width="100%" align="CENTER"  border=0 CELLSPACING="0" CELLPADDING="3">
+     <colgroup>
+      <col width="50%">
+      <col width="50%">
+    </colgroup>
+   
+     
+      <tr>
+       <td>
+        
+        <a href='../topic/TopicAction.do;jsessionid=1CD274DABA78D05F24BB7B77D895BBEE?Id=100'>Assert is for private arguments only</a>
+        
+        
+       </td>
+      
+     
+   
+     
+     
+      <td>
+       
+       <a href='../topic/TopicAction.do;jsessionid=1CD274DABA78D05F24BB7B77D895BBEE?Id=102'>Assert use cases</a>
+        
+        
+      </td>
+     </tr>
+    
+   
+     
+      <tr>
+       <td>
+        
+        <a href='../topic/TopicAction.do;jsessionid=1CD274DABA78D05F24BB7B77D895BBEE?Id=101'>Assertions in general</a>
+        
+        
+       </td>
+      
+     
+   
+     
+     
+      <td>
+       
+       <a href='../topic/TopicAction.do;jsessionid=1CD274DABA78D05F24BB7B77D895BBEE?Id=99'>Force enabling of assertions</a>
+        
+        
+      </td>
+     </tr>
+    
+   
+   </table>
+ 
+   <a name='Constructors'></a>
+   <div class='page-section'>Constructors</div>
+    <table width="100%" align="CENTER"  border=0 CELLSPACING="0" CELLPADDING="3">
+     <colgroup>
+      <col width="50%">
+      <col width="50%">
+    </colgroup>
+   
+     
+      <tr>
+       <td>
+        
+        <a href='../topic/TopicAction.do;jsessionid=1CD274DABA78D05F24BB7B77D895BBEE?Id=84'>Avoid JavaBeans style of construction</a>
+        
+        
+       </td>
+      
+     
+   
+     
+     
+      <td>
+       
+       <a href='../topic/TopicAction.do;jsessionid=1CD274DABA78D05F24BB7B77D895BBEE?Id=142'>Beware of mistaken field redeclares</a>
+        
+        
+      </td>
+     </tr>
+    
+   
+     
+      <tr>
+       <td>
+        
+        <a href='../topic/TopicAction.do;jsessionid=1CD274DABA78D05F24BB7B77D895BBEE?Id=113'>Construct Object using class name</a>
+        
+        
+       </td>
+      
+     
+   
+     
+     
+      <td>
+       
+       <a href='../topic/TopicAction.do;jsessionid=1CD274DABA78D05F24BB7B77D895BBEE?Id=11'>Constructors in general</a>
+        
+        
+      </td>
+     </tr>
+    
+   
+     
+      <tr>
+       <td>
+        
+        <a href='../topic/TopicAction.do;jsessionid=1CD274DABA78D05F24BB7B77D895BBEE?Id=215'>Constructors shouldn't call overridables</a>
+        
+        
+       </td>
+      
+     
+   
+     
+     
+      <td>
+       
+       <a href='../topic/TopicAction.do;jsessionid=1CD274DABA78D05F24BB7B77D895BBEE?Id=254'>Constructors shouldn't start threads</a>
+        
+        
+      </td>
+     </tr>
+    
+   
+     
+      <tr>
+       <td>
+        
+        <a href='../topic/TopicAction.do;jsessionid=1CD274DABA78D05F24BB7B77D895BBEE?Id=12'>Copy constructors</a>
+        
+        
+       </td>
+      
+     
+   
+     
+     
+      <td>
+       
+       <a href='../topic/TopicAction.do;jsessionid=1CD274DABA78D05F24BB7B77D895BBEE?Id=252'>Don't pass 'this' out of a constructor</a>
+        
+        
+      </td>
+     </tr>
+    
+   
+     
+      <tr>
+       <td>
+        
+        <a href='../topic/TopicAction.do;jsessionid=1CD274DABA78D05F24BB7B77D895BBEE?Id=14'>Initializing fields to 0-false-null is redundant</a>
+        
+        
+       </td>
+      
+     
+   
+   </table>
+ 
+   <a name='Serialization'></a>
+   <div class='page-section'>Serialization</div>
+    <table width="100%" align="CENTER"  border=0 CELLSPACING="0" CELLPADDING="3">
+     <colgroup>
+      <col width="50%">
+      <col width="50%">
+    </colgroup>
+   
+     
+      <tr>
+       <td>
+        
+        <a href='../topic/TopicAction.do;jsessionid=1CD274DABA78D05F24BB7B77D895BBEE?Id=45'>Implementing Serializable</a>
+        
+        
+       </td>
+      
+     
+   
+     
+     
+      <td>
+       
+       <a href='../topic/TopicAction.do;jsessionid=1CD274DABA78D05F24BB7B77D895BBEE?Id=70'>Serialization and subclassing</a>
+        
+        
+      </td>
+     </tr>
+    
+   
+     
+      <tr>
+       <td>
+        
+        <a href='../topic/TopicAction.do;jsessionid=1CD274DABA78D05F24BB7B77D895BBEE?Id=121'>Some classes need readResolve</a>
+        
+        
+       </td>
+      
+     
+   
+   </table>
+ 
+   <a name='Threads'></a>
+   <div class='page-section'>Threads</div>
+    <table width="100%" align="CENTER"  border=0 CELLSPACING="0" CELLPADDING="3">
+     <colgroup>
+      <col width="50%">
+      <col width="50%">
+    </colgroup>
+   
+     
+      <tr>
+       <td>
+        
+        <a href='../topic/TopicAction.do;jsessionid=1CD274DABA78D05F24BB7B77D895BBEE?Id=250'>Always shut down an ExecutorService</a>
+        
+        
+       </td>
+      
+     
+   
+     
+     
+      <td>
+       
+       <a href='../topic/TopicAction.do;jsessionid=1CD274DABA78D05F24BB7B77D895BBEE?Id=52'>Avoid ThreadGroup</a>
+        
+        
+      </td>
+     </tr>
+    
+   
+     
+      <tr>
+       <td>
+        
+        <a href='../topic/TopicAction.do;jsessionid=1CD274DABA78D05F24BB7B77D895BBEE?Id=117'>Data integrity first</a>
+        
+        
+       </td>
+      
+     
+   
+     
+     
+      <td>
+       
+       <a href='../topic/TopicAction.do;jsessionid=1CD274DABA78D05F24BB7B77D895BBEE?Id=48'>Document thread safety</a>
+        
+        
+      </td>
+     </tr>
+    
+   
+     
+      <tr>
+       <td>
+        
+        <a href='../topic/TopicAction.do;jsessionid=1CD274DABA78D05F24BB7B77D895BBEE?Id=255'>Dump thread information</a>
+        
+        
+       </td>
+      
+     
+   
+     
+     
+      <td>
+       
+       <a href='../topic/TopicAction.do;jsessionid=1CD274DABA78D05F24BB7B77D895BBEE?Id=251'>Handle InterruptedException</a>
+        
+        
+      </td>
+     </tr>
+    
+   
+     
+      <tr>
+       <td>
+        
+        <a href='../topic/TopicAction.do;jsessionid=1CD274DABA78D05F24BB7B77D895BBEE?Id=50'>Launch thread is just another user thread</a>
+        
+        
+       </td>
+      
+     
+   
+     
+     
+      <td>
+       
+       <a href='../topic/TopicAction.do;jsessionid=1CD274DABA78D05F24BB7B77D895BBEE?Id=51'>Objects communicating across threads</a>
+        
+        
+      </td>
+     </tr>
+    
+   
+     
+      <tr>
+       <td>
+        
+        <a href='../topic/TopicAction.do;jsessionid=1CD274DABA78D05F24BB7B77D895BBEE?Id=247'>Perform N tasks in parallel</a>
+        
+        
+       </td>
+      
+     
+   
+     
+     
+      <td>
+       
+       <a href='../topic/TopicAction.do;jsessionid=1CD274DABA78D05F24BB7B77D895BBEE?Id=248'>Prefer modern libraries for concurrency</a>
+        
+        
+      </td>
+     </tr>
+    
+   
+     
+      <tr>
+       <td>
+        
+        <a href='../topic/TopicAction.do;jsessionid=1CD274DABA78D05F24BB7B77D895BBEE?Id=249'>Query host for the number of processors</a>
+        
+        
+       </td>
+      
+     
+   
+     
+     
+      <td>
+       
+       <a href='../topic/TopicAction.do;jsessionid=1CD274DABA78D05F24BB7B77D895BBEE?Id=118'>Read-write locks</a>
+        
+        
+      </td>
+     </tr>
+    
+   
+     
+      <tr>
+       <td>
+        
+        <a href='../topic/TopicAction.do;jsessionid=1CD274DABA78D05F24BB7B77D895BBEE?Id=35'>Remember the types of intrinsic lock</a>
+        
+        
+       </td>
+      
+     
+   
+     
+     
+      <td>
+       
+       <a href='../topic/TopicAction.do;jsessionid=1CD274DABA78D05F24BB7B77D895BBEE?Id=54'>Schedule periodic tasks </a>
+        
+        
+      </td>
+     </tr>
+    
+   
+     
+      <tr>
+       <td>
+        
+        <a href='../topic/TopicAction.do;jsessionid=1CD274DABA78D05F24BB7B77D895BBEE?Id=47'>Stop threads through cooperation</a>
+        
+        
+       </td>
+      
+     
+   
+     
+     
+      <td>
+       
+       <a href='../topic/TopicAction.do;jsessionid=1CD274DABA78D05F24BB7B77D895BBEE?Id=49'>Synchronize access to mutable fields</a>
+        
+        
+      </td>
+     </tr>
+    
+   
+     
+      <tr>
+       <td>
+        
+        <a href='../topic/TopicAction.do;jsessionid=1CD274DABA78D05F24BB7B77D895BBEE?Id=67'>Synchronized is implementation detail</a>
+        
+        
+       </td>
+      
+     
+   
+     
+     
+      <td>
+       
+       <a href='../topic/TopicAction.do;jsessionid=1CD274DABA78D05F24BB7B77D895BBEE?Id=53'>Thread priorities are not portable</a>
+        
+        
+      </td>
+     </tr>
+    
+   
+     
+      <tr>
+       <td>
+        
+        <a href='../topic/TopicAction.do;jsessionid=1CD274DABA78D05F24BB7B77D895BBEE?Id=253'>Use finally to unlock</a>
+        
+        
+       </td>
+      
+     
+   
+   </table>
+ 
+
+<table>
+<tr>
+ <td class='page-section' align=center colspan=2>
+ <b><font size="+1"><a name="comments">User Comments</a></font></b>
+ </td>
+</tr>
+<tr><td colspan=2><tt>"I just wanted to take a second to say that this site is really useful. It's not all that often that I come across a site that has some good design information without a bunch of boring fluff.  It reminds me of reading <a href="http://www.amazon.com/exec/obidos/ASIN/0321356683/ref=nosim/javapractices-20"><em>Effective Java</em></a>, which I would consider to be one of the best books I've ever picked up."</tt></td></tr>
+<tr><td colspan=2><tt>"I love this site. It's one of the best laid out and most useful sites that I've ever used. Thank you very much."</tt></td></tr>
+<tr><td colspan=2><tt>"First I have to say, what a great site. We were thinking about starting something similar inside the company, but what better news than to hear that someone has done it for us. Keep up the great work."</tt></td></tr>
+<tr><td colspan=2><tt>"I do think this site is excellent. Keep it up."</tt></td></tr>
+<tr><td colspan=2><tt>"Awesome for a beginner like me!"</tt></td></tr>
+<tr><td colspan=2><tt>"A Great Site!!! I refer to it often. I really enjoy your common sense and straight forward, flexible approach to these issues. Thanks!"</tt></td></tr>
+<tr><td colspan=2><tt>"Thanks for a great site, it really stands out from the crowd. Keep up the good work!"</tt></td></tr>
+</table>
+
+ 
+ 
+</div>
+
+  
+
+ 
+
+
+
+
+
+<div align='center' class='legalese'>  
+&copy; 2017 Hirondelle Systems |
+<a href='/source/SourceAction.do;jsessionid=1CD274DABA78D05F24BB7B77D895BBEE'><b>Source Code</b></a><IMG class='no-margin' SRC="/images/goldstar.gif" ALT=""> |
+<a href="mailto:webmaster@javapractices.com">Contact</a> |
+<a href="http://creativecommons.org/licenses/by-nc-sa/1.0/">License</a> |
+<a href='/apps/cjp.rss;jsessionid=1CD274DABA78D05F24BB7B77D895BBEE'>RSS</a>
+<!-- ukey="2AC36CD2" -->
+<!-- ckey="16DF3D87" -->
+<br>
+
+ Individual code snippets can be used under this <a href='../LICENSE.txt'>BSD license</a> - Last updated on September 21, 2013.<br>
+ Over 2,000,000 unique IPs last year - <span title='Java Practices 2.6.5, Mon May 16 00:00:00 EDT 2011'>Built with</span> <a href='http://www.web4j.com'>WEB4J</a>.<br>
+ - In Memoriam : Bill Dirani -
+</div>
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-2633428-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
 
 </body>
 </html>
